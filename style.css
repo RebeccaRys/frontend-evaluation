@@ -1,0 +1,85 @@
+.display {
+    height: 80%;
+    width: 100%;
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+}
+/*this is the basic design for the card and the layout of the content*/
+.card {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 370px;
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: white;
+    overflow: hidden;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.infoButton {
+    width: 80%;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #bab4b4;
+    font-size: large;
+    border-radius: 4px;
+    margin: 15px auto;
+    display: block;
+    transition: all 0.3s ease;
+}
+.text{
+    margin-top:60px;
+}
+.text p{
+    margin-top: auto;
+}
+
+.infoButton:hover {
+    background-color: #e0e0e0;
+    border-color: #aaa;
+}
+
+.top_card {
+    width: 90%;
+    height: 30%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+/*this section helps organize the 2 pictures neatly and aloows them to be stacked without the overlapping becoming an issue*/
+.image-container {
+    position: relative; 
+    width: 100%;
+    height: 100%;
+}
+
+.base-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+}
+
+.image {
+    height: 100px;
+    width: 100px; 
+    border-radius: 50%;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 3px solid white;
+    object-fit: cover;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+/*this section is the design for the additional info section*/
+.additionalInfo {
+    padding: 15px;
+    border-top: 1px solid #bcb5b5;
+    margin: 10px 15px 0;
+    display: none;
+    animation: fadeIn 0.3s ease;
+}

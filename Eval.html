@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User card</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="display">
+        <div class="card">
+            <div class="top_card">
+                <div class="image-container">
+                    <img src="background.jpg" class="base-image">
+                    <img src="user.jpg" class="image">
+                </div>
+                <div class="text">
+                    <h2> John Doe</h2>
+                    <p>John Doe – 32, freelance graphic designer in Portland. Loves minimalism, hiking, coffee, and vinyl.</p>
+                </div>
+            </div>
+            <button class="infoButton">More info</button>
+            <div class="additionalInfo" style="display: none;">
+                <p>John Doe is a 32-year-old freelance graphic designer based in Portland, Oregon. With a passion for minimalist aesthetics and typography, he spends his days crafting logos, branding materials, and digital illustrations for small businesses and startups. 
+                    When he's not glued to his Adobe Creative Suite, he enjoys hiking in the Pacific Northwest, and collecting vintage vinyl records.</p>
+                <p>A self-proclaimed introvert with a dry sense of humor, John prefers cozy cafés over loud bars and would rather binge-watch a documentary series than go to a crowded party. </p>
+                <p>Key Traits:</p>
+                <ul>
+                    <li>Creative but pragmatic</li>
+                    <li>Quietly observant</li>
+                    <li>Low-key tech nerd</li>
+                    <li>Always wearing neutral tones</li>
+                </ul>
+                <p><em>"I like my designs clean, my coffee strong, and my weekends unstructured."</em> — John Doe</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        const infoButton = document.querySelector('.infoButton');
+        const additionalInfo = document.querySelector('.additionalInfo');
+
+        infoButton.addEventListener('click', function() {
+            if (additionalInfo.style.display === 'none') {
+                additionalInfo.style.display = 'block';
+                infoButton.textContent = 'Hide Info';
+            } else {
+                additionalInfo.style.display = 'none';
+                infoButton.textContent = 'More info';
+            }
+        });
+    </script>
+    <!-- The html code dsepicts a simple structure of a user card, with an image, a name, and a description, and a button -->
+    <!-- This js code is used to show a longer description of the user when the button is clicked and it also changes 
+     the content written on the button to "Hide Info" to also allow the reader to "close" the additional info after 
+     they are done reading. This interactive feature is added to make the user card more engaging and user-friendly, 
+     without them being bombarded with too much information at once, so they may chose if they want to see the info or not-->
+</body>
+</html>
